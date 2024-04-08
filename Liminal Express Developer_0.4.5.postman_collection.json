@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "88804895-4ee9-4768-913c-7ba2f5169321",
+		"_postman_id": "402a1b5f-2bd5-4d94-99da-1d763c0e6c95",
 		"name": "Liminal Express Developer_0.4.5",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "17823886"
+		"_exporter_id": "27340086",
+		"_collection_link": "https://crimson-capsule-555134.postman.co/workspace/Team-Workspace~7ba55a27-824b-4560-8f6a-8f1267531cd9/collection/27340086-402a1b5f-2bd5-4d94-99da-1d763c0e6c95?action=share&source=collection_link&creator=27340086"
 	},
 	"item": [
 		{
@@ -56,6 +57,40 @@
 							"response": []
 						},
 						{
+							"name": "Import",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{client_secret}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{client_id}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/mpc-shard/import",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"mpc-shard",
+										"import"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Export",
 							"request": {
 								"auth": {
@@ -93,40 +128,6 @@
 										"api",
 										"mpc-shard",
 										"export"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Import",
-							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": [
-										{
-											"key": "password",
-											"value": "{{client_secret}}",
-											"type": "string"
-										},
-										{
-											"key": "username",
-											"value": "{{client_id}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/api/mpc-shard/import",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"mpc-shard",
-										"import"
 									]
 								}
 							},
@@ -244,54 +245,6 @@
 					"name": "Wallets Creation",
 					"item": [
 						{
-							"name": "AWS Wallets Creation",
-							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": [
-										{
-											"key": "password",
-											"value": "{{client_secret}}",
-											"type": "string"
-										},
-										{
-											"key": "username",
-											"value": "{{client_id}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Basic VFQ0cEFuMkMyVmZWVmR0S2dWc2VUR08wOGE5NEZqaWI6cnVTRWJzZlhGX0ttTFgteEtnOC1OTTMyZm9yNDBYazZHcUFqRmhrbDJqMkZ0UDJKUHFUc0IzendNWlVHZldCVg==",
-										"disabled": true
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"cloudProvider\":\"aws\",\n    \"wallet\":{\n        \"coin\":\"xtz\",\n        \"walletType\":\"withdrawal\",\n        \"coSigners\":[\"mansi@lmnl.app\",\"dhruvil@lmnl.app\"]\n    },\n    \"keyId\":\"mrk-e230d4eb0ee84035a4b359dfe25a9796\"\n}"
-								},
-								"url": {
-									"raw": "{{base_url}}/api/onboarding/create-wallet",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"onboarding",
-										"create-wallet"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "MPC Wallets Creation",
 							"request": {
 								"auth": {
@@ -323,7 +276,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"cloudProvider\":\"mpc\",\n    \"wallet\":{\n        \"coin\":\"eth\",\n        \"walletType\":\"deposit\",\n        \"coSigners\":[\"mansi@lmnl.app\",\"dhruvil@lmnl.app\"]\n    }\n}"
+									"raw": "{\n    \"cloudProvider\":\"mpc\",\n    \"wallet\":{\n        \"coin\":\"eth\",\n        \"walletType\":\"deposit\"\n    }\n}"
 								},
 								"url": {
 									"raw": "{{base_url}}/api/onboarding/create-wallet",
@@ -338,251 +291,6 @@
 								}
 							},
 							"response": []
-						},
-						{
-							"name": "MPC Wallets Creation (Custody)",
-							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": [
-										{
-											"key": "password",
-											"value": "{{client_secret}}",
-											"type": "string"
-										},
-										{
-											"key": "username",
-											"value": "{{client_id}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Basic VFQ0cEFuMkMyVmZWVmR0S2dWc2VUR08wOGE5NEZqaWI6cnVTRWJzZlhGX0ttTFgteEtnOC1OTTMyZm9yNDBYazZHcUFqRmhrbDJqMkZ0UDJKUHFUc0IzendNWlVHZldCVg==",
-										"disabled": true
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"cloudProvider\":\"mpc\",\n    \"wallet\":{\n        \"coin\":\"eth\",\n        \"walletType\":\"deposit\",\n        \"name\":\"eth wallet\",\n        \"organizationType\":\"sub_org\"\n    }\n}"
-								},
-								"url": {
-									"raw": "http://localhost:8081/api/onboarding/create-wallet",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8081",
-									"path": [
-										"api",
-										"onboarding",
-										"create-wallet"
-									]
-								}
-							},
-							"response": [
-								{
-									"name": "MPC-Wallets-Creation-(Custody)-Bad-Request-1",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "Basic VFQ0cEFuMkMyVmZWVmR0S2dWc2VUR08wOGE5NEZqaWI6cnVTRWJzZlhGX0ttTFgteEtnOC1OTTMyZm9yNDBYazZHcUFqRmhrbDJqMkZ0UDJKUHFUc0IzendNWlVHZldCVg==",
-												"disabled": true
-											},
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"cloudProvider\":\"mpc\",\n    \"wallet\":{\n        \"coin\":\"eth\",\n        \"walletType\":\"deposit\",\n        \"name\":\"\",\n        \"organizationType\":\"\"\n    }\n}"
-										},
-										"url": {
-											"raw": "http://localhost:8081/api/onboarding/create-wallet",
-											"protocol": "http",
-											"host": [
-												"localhost"
-											],
-											"port": "8081",
-											"path": [
-												"api",
-												"onboarding",
-												"create-wallet"
-											]
-										}
-									},
-									"status": "Bad Request",
-									"code": 400,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "X-DNS-Prefetch-Control",
-											"value": "off"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "SAMEORIGIN"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=15552000; includeSubDomains"
-										},
-										{
-											"key": "X-Download-Options",
-											"value": "noopen"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Content-Length",
-											"value": "295"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"127-kJ/t9njm53D7Fypw8S9vwaRMUS8\""
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 13 Dec 2023 06:03:02 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"success\": false,\n    \"data\": {\n        \"errors\": [\n            {\n                \"value\": \"\",\n                \"msg\": \"organization type is required\",\n                \"param\": \"wallet.organizationType\",\n                \"location\": \"body\"\n            },\n            {\n                \"value\": \"\",\n                \"msg\": \"organization type should be either sub_org,management or standard.\",\n                \"param\": \"wallet.organizationType\",\n                \"location\": \"body\"\n            }\n        ]\n    },\n    \"message\": null\n}"
-								},
-								{
-									"name": "MPC-Wallets-Creation-(Custody)-Bad-Request-2",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "Basic VFQ0cEFuMkMyVmZWVmR0S2dWc2VUR08wOGE5NEZqaWI6cnVTRWJzZlhGX0ttTFgteEtnOC1OTTMyZm9yNDBYazZHcUFqRmhrbDJqMkZ0UDJKUHFUc0IzendNWlVHZldCVg==",
-												"disabled": true
-											},
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"cloudProvider\":\"mpc\",\n    \"wallet\":{\n        \"coin\":\"eth\",\n        \"walletType\":\"deposit\",\n        \"name\":\"\",\n        \"organizationType\":\"sub_org\"\n    }\n}"
-										},
-										"url": {
-											"raw": "http://localhost:8081/api/onboarding/create-wallet",
-											"protocol": "http",
-											"host": [
-												"localhost"
-											],
-											"port": "8081",
-											"path": [
-												"api",
-												"onboarding",
-												"create-wallet"
-											]
-										}
-									},
-									"status": "Bad Request",
-									"code": 400,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "X-DNS-Prefetch-Control",
-											"value": "off"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "SAMEORIGIN"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=15552000; includeSubDomains"
-										},
-										{
-											"key": "X-Download-Options",
-											"value": "noopen"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Content-Length",
-											"value": "137"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"89-LwamLiECu4Cou9/hsQGVIAR8lAY\""
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 13 Dec 2023 06:04:10 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"success\": false,\n    \"data\": {\n        \"errors\": [\n            {\n                \"value\": \"\",\n                \"msg\": \"Wallet name is required\",\n                \"param\": \"wallet.name\",\n                \"location\": \"body\"\n            }\n        ]\n    },\n    \"message\": null\n}"
-								}
-							]
 						}
 					]
 				},
