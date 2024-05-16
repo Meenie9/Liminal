@@ -3406,7 +3406,7 @@
 			"name": "WalletV2",
 			"item": [
 				{
-					"name": "Send Many Request",
+					"name": "Create transaction requests",
 					"request": {
 						"auth": {
 							"type": "basic",
