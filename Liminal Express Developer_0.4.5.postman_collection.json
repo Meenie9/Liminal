@@ -485,7 +485,7 @@
 					"name": "Generate Address",
 					"item": [
 						{
-							"name": "Generate Single Address",
+							"name": "Generate a single address",
 							"request": {
 								"auth": {
 									"type": "basic",
@@ -528,7 +528,7 @@
 							"response": []
 						},
 						{
-							"name": "Generate Many Address",
+							"name": "Generate multiple addresses",
 							"request": {
 								"auth": {
 									"type": "basic",
@@ -622,7 +622,7 @@
 							"name": "NativeCoin",
 							"item": [
 								{
-									"name": "Get Address Balance",
+									"name": "Retrieve a wallet coin balance",
 									"request": {
 										"auth": {
 											"type": "basic",
@@ -713,7 +713,7 @@
 							"name": "Token",
 							"item": [
 								{
-									"name": "Get Address balance by Token",
+									"name": "Retrieve a wallet token balance",
 									"request": {
 										"auth": {
 											"type": "basic",
@@ -907,7 +907,7 @@
 									"response": []
 								},
 								{
-									"name": "Resend Transaction EVM Only",
+									"name": "Resend an EVM-chain transaction",
 									"request": {
 										"auth": {
 											"type": "basic",
@@ -1018,10 +1018,10 @@
 									"name": "UTXO",
 									"item": [
 										{
-											"name": "Consolidation Transaction from All Addresss",
+											"name": "Consolidate UTXO coins",
 											"item": [
 												{
-													"name": "Consolidate Transaction Using UTXO",
+													"name": "Consolidate UTXO coins",
 													"request": {
 														"auth": {
 															"type": "basic",
@@ -1253,10 +1253,10 @@
 									"name": "NON-UTXO",
 									"item": [
 										{
-											"name": "Consolidation Transaction from All Addresss",
+											"name": "Consolidate non-UTXO coins",
 											"item": [
 												{
-													"name": "Consolidated Transaction Using Non-UTXO By Native Coin",
+													"name": "Consolidate non-UTXO coins",
 													"request": {
 														"auth": {
 															"type": "basic",
@@ -1299,7 +1299,7 @@
 													"response": []
 												},
 												{
-													"name": "Consolidated Transaction Using Non UTXO By Token",
+													"name": "Consolidate non-UTXO tokens",
 													"request": {
 														"auth": {
 															"type": "basic",
@@ -1780,7 +1780,7 @@
 					]
 				},
 				{
-					"name": "Get Transaction Status",
+					"name": "Retrieve a transaction status",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -1823,7 +1823,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Transfer List",
+					"name": "Retrieve a list of transfers",
 					"request": {
 						"auth": {
 							"type": "basic",
