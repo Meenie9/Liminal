@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "402a1b5f-2bd5-4d94-99da-1d763c0e6c95",
-		"name": "Liminal Express Developer_0.4.5",
+		"_postman_id": "1b182e7e-fabc-46de-904e-433e381b4e6d",
+		"name": "Liminal Express Developer_0.4.6",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "27340086",
-		"_collection_link": "https://crimson-capsule-555134.postman.co/workspace/Team-Workspace~7ba55a27-824b-4560-8f6a-8f1267531cd9/collection/27340086-402a1b5f-2bd5-4d94-99da-1d763c0e6c95?action=share&source=collection_link&creator=27340086"
+		"_exporter_id": "33918076"
 	},
 	"item": [
 		{
@@ -239,13 +238,13 @@
 			]
 		},
 		{
-			"name": "Wallets",
+			"name": "Wallets (V1)",
 			"item": [
 				{
 					"name": "Wallets Creation",
 					"item": [
 						{
-							"name": "MPC Wallets Creation",
+							"name": "Create a hot wallet (V1)",
 							"request": {
 								"auth": {
 									"type": "basic",
@@ -276,7 +275,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"cloudProvider\":\"mpc\",\n    \"wallet\":{\n        \"coin\":\"eth\",\n        \"walletType\":\"deposit\"\n    }\n}"
+									"raw": "{\n    \"cloudProvider\":\"mpc\",\n    \"wallet\":{\n        \"coin\":\"eth\",\n        \"walletType\":\"deposit\",\n        \"walletVersion\": 1\n    }\n}"
 								},
 								"url": {
 									"raw": "{{base_url}}/api/onboarding/create-wallet",
@@ -3403,8 +3402,56 @@
 			]
 		},
 		{
-			"name": "WalletV2",
+			"name": "Wallets (V2)",
 			"item": [
+				{
+					"name": "Create a hot wallet (V2)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{client_id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic VFQ0cEFuMkMyVmZWVmR0S2dWc2VUR08wOGE5NEZqaWI6cnVTRWJzZlhGX0ttTFgteEtnOC1OTTMyZm9yNDBYazZHcUFqRmhrbDJqMkZ0UDJKUHFUc0IzendNWlVHZldCVg==",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cloudProvider\":\"mpc\",\n    \"wallet\":{\n        \"coin\":\"eth\",\n        \"walletType\":\"deposit\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/onboarding/create-wallet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"onboarding",
+								"create-wallet"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "Create transaction requests",
 					"request": {
